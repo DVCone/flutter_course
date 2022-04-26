@@ -49,3 +49,7 @@ import 'package:flutter/material.dart';
   }
   */
 
+void main() {
+      Map map = {'kid1' : 'joe', 'kid2' : 'jean', 'kid3' : 'jerry'};
+      debugPrint(map['kid2']);
+}
