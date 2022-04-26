@@ -120,14 +120,65 @@ this is
 mutiple line
 comments
 */
+
+///this is document comment use with brecket [MyApp]
+
+/**
+* this is 
+* multiple line of
+* document comment use with bracket [MyApp]
+*/
 ```
 
+## F. Function
+Dart will execute the code only inside the function.
+```dart
+//example
+void main() {
+      functionName(3, 5); //this is another function
+}
 
+//variable scoup
+int functionName(int a, int b) {
+      int result = a * b;
+      return result;
+}
+```
 
+## G. Syncronous (sync) and Asyncronous (async) 
+there are 2 types of data processing in dart.
 
+1. Syncronous (sync) = series
+if there are 2 processing route (ex: route 1, route 2), syncronous will only process one route and stop the other one.
 
+2. Asyncronous (async) = parallel
+if there are 2 processing route (ex: route 1, route 2), asyncronous will process one route and the other route is still processing.
+```dart
+//example of syncronous
+void main() {
+   debugPrint("first execute");
+   async1();
+   debugPrint("secound execute");
+   debugPrint("tridh execute");
+}
+
+//example of asyncronous
+void async1() {
+      //this is future with anonymous function
+      Future({} { 
+            debugPrint("async execute")
+      });
+}
+
+//Note: 
+      /*
+      you can't execute asyncronous example in widget_test.dart, use dardPad to try it
+      */
+```
 
 Source:
 <br/> https://youtu.be/rNBdM5YAJtY
 <br/> https://youtu.be/XKOEQo6KPsE
 <br/> https://youtu.be/5jxQBuxS2ng
+<br/> https://youtu.be/EzG4jRvvxLo
+<br/> https://youtu.be/VokB_IATZl0
