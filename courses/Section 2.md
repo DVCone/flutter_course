@@ -148,10 +148,10 @@ int functionName(int a, int b) {
 ## G. Syncronous (sync) and Asyncronous (async) 
 there are 2 types of data processing in dart.
 
-1. Syncronous (sync) = series
+1. Syncronous (sync) = series <br/>
 if there are 2 processing route (ex: route 1, route 2), syncronous will only process one route and stop the other one.
 
-2. Asyncronous (async) = parallel
+2. Asyncronous (async) = parallel <br/>
 if there are 2 processing route (ex: route 1, route 2), asyncronous will process one route and the other route is still processing.
 ```dart
 //example of syncronous
@@ -176,9 +176,76 @@ void async1() {
       */
 ```
 
+## H. Exception
+It is Dart feature to except other data type or function.
+
+```dart
+void main() {
+      //it will except string type ("..") to the integer type (int) 
+      int age = int.parse("50");
+      debugPrint(age);
+
+      try{
+            //this result will be error because string format can't be integer
+            int ages = int.parse("abc");
+            debugPrint(ages);
+      }catch (e) {
+            //the error will be display by catch the error function
+            debugPrint(e);
+            //make custom error instruction
+            if(e == FormatException){
+                  debugPrint("Please input number in Integer section!");
+            }
+      }
+}
+```
+
+## I. Loop
+Dart Loop is used to run a block of code repetitively for a given number of times or until matches the specified condition. there is 2 type in dart loop :
+
+1. For loop <br/>
+```dart
+void main() {
+      for(int i = 1; i <= 5; i++) {
+        debugPrint('$i');
+      }
+
+      for(int a = 10; a >= 5; a++) {
+        debugPrint('$a');
+      }
+}
+```
+2. Do-While Loop <br/>
+```dart
+void main() {
+      int i = 1;
+      do {
+            debugPrint('$i');
+            i++;
+      } while(i <= 10);
+}
+```
+3. List Loop <br/>
+```dart
+void main() {
+      List<String> animal = ['cat', 'dog', 'fish'];
+
+      for(int i = 0; i <= animal.length - 1; i++){
+            debugPrint('Animal : ${animal[i]}')
+      }
+}
+```
+[Practice on `test/widget_test.dart`]
+
+## H. Conditional Expression
+
+
 Source:
-<br/> https://youtu.be/rNBdM5YAJtY
-<br/> https://youtu.be/XKOEQo6KPsE
-<br/> https://youtu.be/5jxQBuxS2ng
-<br/> https://youtu.be/EzG4jRvvxLo
-<br/> https://youtu.be/VokB_IATZl0
+<br/> S2 E1: https://youtu.be/rNBdM5YAJtY
+<br/> S2 E2: https://youtu.be/XKOEQo6KPsE
+<br/> S2 E3: https://youtu.be/5jxQBuxS2ng
+<br/> S2 E4: https://youtu.be/zLzlSVD85GA
+<br/> S2 E5: https://youtu.be/EzG4jRvvxLo
+<br/> S2 E6: https://youtu.be/VokB_IATZl0
+<br/> S2 E7: https://youtu.be/kLxVlV45x9g
+<br/> S2 E8: https://youtu.be/KVcmgr29v9c

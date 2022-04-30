@@ -31,4 +31,4 @@ and there is alse 2 type to run flutter project with vscode:
       c. in top right will be a mini bar that you can use automatically to run flutter project.
 
 Source : 
-<br/> https://youtu.be/mEnHFfpeLUQ
+<br/> S1 E1: https://youtu.be/mEnHFfpeLUQ
