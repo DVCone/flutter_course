@@ -29,6 +29,3 @@ and there is alse 2 type to run flutter project with vscode:
       a. make sure you are inside the project folder. <br/>
       b. open vscode debug manager by press (f5). <br/>
       c. in top right will be a mini bar that you can use automatically to run flutter project.
-
-Source : 
-<br/> S1 E1: https://youtu.be/mEnHFfpeLUQ

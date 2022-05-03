@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
     1. void = don't want return function.
     2. flutter will only work with `main() {}` function.
     3. `main() {}` function can work without void and can use return function.
-  */
+*/
 
 // Example of Inference Type
 /*
@@ -36,7 +36,7 @@ import 'package:flutter/material.dart';
       List<String> group2 = ["Alex", "Jhon", "Joe"];
       debugPrint(group2.toString());
   }
-  */
+*/
 
 // Example of String Interpolation
 /*
@@ -45,7 +45,7 @@ import 'package:flutter/material.dart';
     int age = 21;
     debugPrint("Hi, My name is $name and i am $age years old.");
   }
-  */
+*/
 
 // Example of Map Data type
 /*
@@ -53,7 +53,7 @@ import 'package:flutter/material.dart';
         Map map = {'kid1' : 'joe', 'kid2' : 'jean', 'kid3' : 'jerry'};
         debugPrint(map['kid2']);
   }
-  */
+*/
 
 // Example of Exception
 /*
@@ -76,7 +76,7 @@ import 'package:flutter/material.dart';
       debugPrint('$e');
     }
   }
-  */
+*/
 
 // Example of Loop
 /*
@@ -113,12 +113,10 @@ import 'package:flutter/material.dart';
       //Looping with foreach
       animalList.forEach((animals) => debugPrint('Animal : $animals'));
     }
-  */
+*/
 
 void main() {
-  List<String> animalList = ['cat', 'dog', 'fish'];
+  String name = "Jhon";
 
-  for (String animals in animalList) {
-    debugPrint('Animal : $animals');
-  }
+  debugPrint(name);
 }

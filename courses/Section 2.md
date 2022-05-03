@@ -1,8 +1,8 @@
 # **Chapter 2 : Dart Fundamental**
-## A. What is Dart?
+## **1. What is Dart?**
 Dart is Programming Language to developing flutter SDK.
-## B. Characteristic of Dart
-1. Static Type  <br/>
+## **2. Characteristic of Dart**
+**a. Static Type**  <br/>
 Dart language need to defined a variable before using it.
 ```dart
 //example: 
@@ -11,7 +11,7 @@ debugPrint(name);
 ```
 [Practice on `test/widget_test.dart`]
 
-2. Inference Type <br/>
+**b. Inference Type** <br/>
 Dart can make variable to follow data type from the value, this does not apply if the data type has been given to the variable.
 ```dart
 example:
@@ -25,7 +25,7 @@ debugPrint(age);
 ```
 [Practice on `test/widget_test.dart`]
 
-3. String Expression / String Interpolation <br/>
+**c. String Expression / String Interpolation** <br/>
 Dart can use ($) symbol to show all type of variable into the string.
 ```dart
 //example:
@@ -35,9 +35,10 @@ debugPrint("$word and how are you $name");
 ```
 [Practice on `test/widget_test.dart`]
 
-4. Object Oriented Programming / OOP <br/>
-Dart
-## C. Data Type
+**d. Object Oriented Programming / OOP** <br/>
+Dart supports object-oriented programming features like classes, interfaces, etc.
+
+## **3. Data Type**
 this is a list of Data Type in Dart language :
 String    = `String`
 - Boolean   = `bool`
@@ -50,14 +51,14 @@ String    = `String`
 
 ```dart
 //example:
-String name = "Jhon Doe";     ///Jhon Doe
-int age = 20;                 ///20
-num weight = 60.5;            ///60.5
-double height = 5;            ///5.0
-bool marriage = true;         ///true
-List<dynamic> favoriteNumber = [1, "two", 3]; /// 1,two,3
-List<String> kidName = ["Joe", "Jean", "Jerry"]; ///Joe,Jean,Jerry
-List<int> favoriteNumber = [1, 2, 3]; /// 1,2,3
+String name = "Jhon Doe";     
+int age = 20;                 
+num weight = 60.5;            
+double height = 5;            
+bool marriage = true;         
+List<dynamic> favoriteNumber = [1, "two", 3]; 
+List<String> kidName = ["Joe", "Jean", "Jerry"]; 
+List<int> favoriteNumber = [1, 2, 3]; 
 
 //Map Data Type
 void main() {
@@ -77,23 +78,33 @@ you can process data type in dart language.
 //Example of data type processing
 String name = "Jhon Doe";
       //make all string is lowercase
-      debugPrint(name.toLowerCase()); ///jhon doe
+      debugPrint(name.toLowerCase());
+      //result is jhon doe
+
       //make all string is uppercase
-      debugPrint(name.toUpperCase()); /// JHON DOE
+      debugPrint(name.toUpperCase());
+      //result is JHON DOE
+
       //split string from predetermined order
-      debugPrint(name.substring(2)); /// on Doe
-      debugPrint(name.subString(2, 7)); ///on D
+      debugPrint(name.substring(2));
+      //result is on Doe
+      debugPrint(name.subString(2, 7));
+      //result is on D
 
 double age1 = -30.8;
 double age2 = 40.8;
       //make number is absolute positive
-      debugPrint(age1.abs()); ///30.8
+      debugPrint(age1.abs()); 
+      //Result is 30.8
+
       //to rounded decimal number
-      debugPrint(age2.cell()); ///41
-      debugPrint(age2.floor()); ///40
+      debugPrint(age2.cell()); 
+      //Result is 41
+      debugPrint(age2.floor());
+      //Result is 40
 ```
 
-## D. Final & Const
+## **4. Final & Const**
 Final will defined as fixed variable and cant be changed.
 
 ```dart
@@ -110,7 +121,7 @@ void main() {
 }
 ```
 
-## E. Comments
+## **5. Comments**
 Comments `//... or /*...*/` will make project code more clean and will help other developers to understand the code, also with comment you can make under development will not executed by flutter.
 ```dart
 //this is single line comment 
@@ -130,12 +141,13 @@ comments
 */
 ```
 
-## F. Function
+## **6. Function**
 Dart will execute the code only inside the function.
 ```dart
 //example
 void main() {
-      functionName(3, 5); //this is another function
+      //this is another function
+      functionName(3, 5); 
 }
 
 //variable scoup
@@ -145,13 +157,13 @@ int functionName(int a, int b) {
 }
 ```
 
-## G. Syncronous (sync) and Asyncronous (async) 
+## **7. Syncronous (sync) and Asyncronous (async)**
 there are 2 types of data processing in dart.
 
-1. Syncronous (sync) = series <br/>
+**a. Syncronous (sync) = series** <br/>
 if there are 2 processing route (ex: route 1, route 2), syncronous will only process one route and stop the other one.
 
-2. Asyncronous (async) = parallel <br/>
+**b. Asyncronous (async) = parallel** <br/>
 if there are 2 processing route (ex: route 1, route 2), asyncronous will process one route and the other route is still processing.
 ```dart
 //example of syncronous
@@ -176,7 +188,7 @@ void async1() {
       */
 ```
 
-## H. Exception
+## **8. Exception**
 It is Dart feature to except other data type or function.
 
 ```dart
@@ -200,10 +212,10 @@ void main() {
 }
 ```
 
-## I. Loop
+## **9. Loop**
 Dart Loop is used to run a block of code repetitively for a given number of times or until matches the specified condition. there is 2 type in dart loop :
 
-1. For loop <br/>
+**a. For loop** <br/>
 ```dart
 void main() {
       for(int i = 1; i <= 5; i++) {
@@ -215,7 +227,7 @@ void main() {
       }
 }
 ```
-2. Do-While Loop <br/>
+**b. Do-While Loop** <br/>
 ```dart
 void main() {
       int i = 1;
@@ -225,7 +237,7 @@ void main() {
       } while(i <= 10);
 }
 ```
-3. List Loop <br/>
+**c. List Loop** <br/>
 ```dart
 void main() {
       List<String> animal = ['cat', 'dog', 'fish'];
@@ -237,15 +249,168 @@ void main() {
 ```
 [Practice on `test/widget_test.dart`]
 
-## H. Conditional Expression
+## **10. Conditional Expression**
+Also Called "Ternary Operator" or it's simplify of **if-else Statement** to compire a statement from other data.
+
+**a. if-else**
+```dart
+void main() {
+  String name = "Alex";
+  if(name == "Jhon"){
+        //if statement is wright then go to output
+        debugPrint('He is Jhon');
+  } else if(name == "Peter") {
+        //if statement is wrong then check with other statement
+        debugPrint('He is Peter');
+  } else {
+        //if statement is wrong then go to output
+        debugPrint('He isn\'t Jhon or peter, he is $name');
+  }
+}
+```
+
+**b. switch-case**
+```dart
+void main() {
+      String name = "Alex";
+
+      switch(name){
+            //First Statement check
+            case "Jhon": 
+                  debugPrint("He is Jhon");
+                  break;
+            //Second Statement check
+            case "Peter": 
+                  debugPrint("He is Peter");
+                  break;
+            //Last Statement check
+            case "Alex": 
+                  debugPrint("He is Alex");
+                  break;
+            //if all the statement is wrong then go to output
+            default :
+                  debugPrint("He isn't Jhon or Peter, He is $name");
+                  break;
+      }
+}
+
+//Note: 
+      /*
+            Every [case] must be [break;] to stop process the next case. but in [default] it can run without [break;] because it's ;last statement.
+      */
+```
+
+## **11. Collections**
+Collections is Dart variable it can be included more than 1 data.
+
+**a. Map{"..." : ...,}**
+```dart
+void main() {
+      Map report = {
+            "math" : [4, 5, 6, 2],
+            "art" : [5, 7, 8, 5],
+            "biology" : [8, 9, 7, 4],
+      };
+
+      //get with Key
+      debugPrint('${report["math"]}');
+
+      //get with Key by index
+      debugPrint('${report["math"][2]}');
+}
+//Note: 
+      /*
+      Map is must using "Key : Value".
+      */
+```
+
+**b. Set{}**
+```dart
+void main() {
+      Set biology = {8, 9, 4, 6, 7};
+      Set math    = {4, 5, 8, 10};
+
+      //get all index value
+      debugPrint('$biology');
+
+      //get by index
+      debugPrint('${biology.elementAt(1)}');
+
+      //combine a value from other Set
+      debugPrint('${biology.union(math)}');
+
+      //get the same value from other Set
+      debugPrint('${biology.intersection(math)}')
+
+}
+//Note :
+      /*
+      Set can't use index "debugPrint('${biology[0]}');". but Set is use ".elementAt()". you can use Set as intersection or union, ect.
+      */
+```
+
+**c. List[]**
+```dart
+void main() {
+      List animals = ['cat', 'dog', 'fish'];
+
+      //get by index
+      debugPrint("${animals[0]}");
+}
+```
+
+**d. Spread Collection**
+```dart
+void main() {
+      //original data
+      List data = [4, 7, 8, 2];
+
+      //add more data from original data with spread collection
+      List dataCopy = [...data, 5];
+
+      debugPrint('$dataCopy');
+}
+//Note :
+      /*
+      a. Spread Collection is to add more data into the new data collection from previous collection, to use it jus add 3 dots before previous collection name.
+      b. Spread Collection can use with List[] and Set{}.
+      */
+```
+
+## **12. Null Safety**
+Null Safety is Dart feature to know about error by null value. there is 3 type new syntax **!, ?, late**.
+
+- ? = defined a variable can be null.
+- ?? = to handle null value.
+- ! = defined a variable was not null anymore.
 
 
-Source:
-<br/> S2 E1: https://youtu.be/rNBdM5YAJtY
-<br/> S2 E2: https://youtu.be/XKOEQo6KPsE
-<br/> S2 E3: https://youtu.be/5jxQBuxS2ng
-<br/> S2 E4: https://youtu.be/zLzlSVD85GA
-<br/> S2 E5: https://youtu.be/EzG4jRvvxLo
-<br/> S2 E6: https://youtu.be/VokB_IATZl0
-<br/> S2 E7: https://youtu.be/kLxVlV45x9g
-<br/> S2 E8: https://youtu.be/KVcmgr29v9c
+Null Safety feature is introduce in flutter v.2.12.
+```dart
+//Example 1
+void main() {
+      String? name = getName();
+
+      if(name == null) {
+            debugPrint("There is null data");
+      } else {
+            debugPrint('$name is ${name!.length} character');
+      }
+}
+
+String? getName() {
+      return "Jhon";
+}
+```
+```dart
+//Example 2
+void main() {
+      String? name = getName();
+
+      debugPrint(name?.length ?? "There is null data");
+}
+
+String? getName() {
+      return "jean";
+}
+```
