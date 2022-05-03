@@ -472,7 +472,7 @@ class Cloth {
 }
 ```
 
-**Constructor**
+### **Constructor**
 The different between positional constructor and named constructor is like using List[] and Map{}, to use named constructor just add {} and call the Key: before the value. 
 
 **a. Positional Constructor**
