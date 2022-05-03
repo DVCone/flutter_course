@@ -383,7 +383,7 @@ Null Safety is Dart feature to know about error by null value. there is 3 type n
 - ? = defined a variable can be null.
 - ?? = to handle null value.
 - ! = defined a variable was not null anymore.
-
+- late = to ensure there is inialization variable before execute a variable maybe have null value.
 
 Null Safety feature is introduce in flutter v.2.12.
 ```dart
@@ -414,3 +414,237 @@ String? getName() {
       return "jean";
 }
 ```
+```dart
+//Example 3
+void main() {
+      late String? name;
+
+      name = "Unknown";
+
+      paramName(name);
+}
+
+void paramName(String? paramname) {
+      debugPrint(paramname);
+}
+```
+
+## **13. Object Oriented Programming (OOP)**
+<p>
+OOP or Object Oriented Programming paradigm is to make everything is object secquently and very helpful in manageable dart project because with this concepts will make the project easy to use 
+and maintenance.
+</p>
+
+## **14. Class**
+Class is a part of OOP Paradigm.
+```dart
+//Example 1
+void main() {
+      //Instance of 'object'
+      debugPrint(Cloth());
+
+      //get index from object
+      debugPrint("${Cloth().type} color is ${Cloth().color}");
+}
+
+//Class Object
+class Cloth {
+      String type = "Fiber";
+      String color = "White";
+}
+```
+```dart
+//Example 2
+void main() {
+      //temporary variable
+      var underwear = Cloth();
+      underwear.type = "Cotton";
+      underwear.color = "Black";
+
+      //get index from object
+      debugPrint("${underwear.type} underwear color is ${underwear.color}");
+}
+
+//Class Object
+class Cloth {
+      String? type;
+      String? color;
+}
+```
+
+**Constructor**
+The different between positional constructor and named constructor is like using List[] and Map{}, to use named constructor just add {} and call the Key: before the value. 
+
+**a. Positional Constructor**
+```dart
+void main() {
+      //constructor variable
+      var underwear = Cloth("fiber", "blue");
+
+      //get index from object
+      debugPrint("${underwear.type} underwear color is ${underwear.color}");
+}
+
+//Class Object
+class Cloth {
+      //atribute
+      String? type;
+      String? color;
+
+      //positional constructor
+      Cloth(String types, String colors){
+            type = types;
+            color = colors;
+      }  
+}
+```
+
+**b. Named Constructor**
+```dart
+void main() {
+      //constructor variable
+      var underwear = Cloth(types: "fiber",colors: "blue");
+
+      //get index from object
+      debugPrint("${underwear.type} underwear color is ${underwear.color}");
+}
+
+//Class Object
+class Cloth {
+      //atribute
+      String? type;
+      String? color;
+
+      //named constractor
+      Cloth({String? types, String? colors}) {
+            type = types;
+            color = colors;
+      }  
+}
+```
+**c. Direct Constructor**
+```dart
+void main() {
+      //constructor variable
+      var underwear = Cloth("fiber", "blue");
+
+      //get index from object
+      debugPrint("${underwear.type} underwear color is ${underwear.color}");
+}
+
+//Class Object
+class Cloth {
+      //atribute
+      String? type;
+      String? color;
+
+      //direct positional constractor
+      Cloth(this.type, this.color);
+}
+```
+
+```dart
+void main() {
+      //constructor variable
+      var underwear = Cloth(type: "fiber",color: "blue");
+
+      //get index from object
+      debugPrint("${underwear.type} underwear color is ${underwear.color}");
+}
+
+//Class Object
+class Cloth {
+      //atribute
+      String? type;
+      String? color;
+
+      //direct named constractor
+      Cloth({this.type, this.color});
+}
+```
+
+**d. Method Constructor**
+```dart
+void main() {
+      //constructor variable
+      var underwear = Cloth(type: "fiber",color: "blue");
+
+      //old result
+      debugPrint("${underwear.type} underwear color is ${underwear.color()}");
+
+      //change attribute value
+      underwear.changeCloth("Silk");
+
+      //new result
+      debugPrint("${underwear.type} underwear color is ${underwear.color()}");
+}
+
+//Class Object
+class Cloth {
+      //attribute
+      String? type;
+      //Private attribute
+      String? _color;
+
+      //direct named constractor
+      Cloth({this.type, String? color}) {
+            _color = color;
+      }
+
+      //method Set function
+      void changeCloth(String? newType) {
+            type = newType;
+      }
+
+      //Conventional Get Method
+      String? color() {
+            return _color;
+      }
+}
+
+//Note:
+      /*
+      to make private attribute so it can't be change, add underscore (_) before attribute name.
+
+      private attribute is use for encapsulation to prevent dirrect changes to data value.
+      */
+```
+
+```dart
+void main() {
+      //constructor variable
+      var underwear = Cloth(type: "fiber",color: "blue");
+
+      //old result
+      debugPrint("${underwear.type} underwear color is ${underwear.color}");
+
+      //change attribute value
+      underwear.setType = "Cotton";
+
+      //new result
+      debugPrint("${underwear.type} underwear color is ${underwear.color}");
+}
+
+//Class Object
+class Cloth {
+      //attribute
+      String? type;
+      //Private attribute
+      String? _color;
+
+      //direct named constractor
+      Cloth({this.type, String? color}) {
+            _color = color;
+      }
+
+      //Setter Method
+      set setType(String? newType) {
+            type = newType;
+      }
+
+      //Getter Method
+      String? get color {
+            return _color;
+      }
+}
+``` 

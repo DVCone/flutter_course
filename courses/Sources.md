@@ -1,7 +1,7 @@
-Season 1
+## Season 1
 <br/> E1    : https://youtu.be/mEnHFfpeLUQ
 
-Season 2
+## Season 2
 <br/> E1    : https://youtu.be/rNBdM5YAJtY
 <br/> E2    : https://youtu.be/XKOEQo6KPsE
 <br/> E3    : https://youtu.be/5jxQBuxS2ng
@@ -13,3 +13,6 @@ Season 2
 <br/> E9    : https://youtu.be/O1Ehh2JfaQU
 <br/> E10   : https://youtu.be/_DQNvBEM1as
 <br/> E11   : https://youtu.be/0LQlZCoS5B8
+<br/> E12   : https://youtu.be/wKGw_EjD1wc
+<br/> E13   : https://youtu.be/OBGVpJXoxHM
+
