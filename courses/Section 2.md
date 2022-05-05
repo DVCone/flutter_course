@@ -522,7 +522,7 @@ class Cloth {
       }  
 }
 ```
-**c. Direct Constructor**
+**c. Direct Positional Constructor**
 ```dart
 void main() {
       //constructor variable
@@ -543,6 +543,7 @@ class Cloth {
 }
 ```
 
+**d. Direct Named Constructor**
 ```dart
 void main() {
       //constructor variable
@@ -563,7 +564,7 @@ class Cloth {
 }
 ```
 
-**d. Method Constructor**
+**e. Method Set Function Constructor**
 ```dart
 void main() {
       //constructor variable
@@ -610,6 +611,7 @@ class Cloth {
       */
 ```
 
+**f. Setter & Getter Method Constructor**
 ```dart
 void main() {
       //constructor variable
@@ -648,3 +650,5 @@ class Cloth {
       }
 }
 ``` 
+
+## **15. Inheritance & Abstract Class**
