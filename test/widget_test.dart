@@ -115,8 +115,56 @@ import 'package:flutter/material.dart';
     }
 */
 
+//Example of Inheritence Class
+/*
+import 'S2 E15/air.dart';
+import 'S2 E15/land.dart';
+import 'S2 E15/water.dart';
 void main() {
-  String name = "Jhon";
+  //attribute value
+  Mamals animal1 =
+      Mamals(
+        name: "Lion",
+        weight: 10, 
+        runSpeed: 4,
+      );
 
-  debugPrint(name);
+  //output
+  debugPrint(
+      "1st Animal: ${animal1.name} is ${animal1.category} with ${animal1.weight} Kg, and have ${animal1.runSpeed} run speed");
+
+  animal1.food = 1;
+
+  debugPrint("final ${animal1.name} weight is ${animal1.weight}");
+
+  debugPrint("\n=====\n");
+
+  Fish animal2 = Fish(
+    name: "Shark",
+    weight: 10,
+    swimSpeed: 20,
+  );
+
+  debugPrint(
+      "2nd Animal: ${animal2.name} is ${animal2.category} with ${animal2.weight} Kg, and have ${animal2.swimSpeed} swim speed");
+
+  animal2.food = 2;
+
+  debugPrint("final ${animal2.name} weight is ${animal2.weight}");
+
+  debugPrint("\n=====\n");
+
+  Bird animal3 = Bird(
+    name: "Hawk",
+    weight: 10,
+    flySpeed: 20,
+  );
+
+  debugPrint(
+      "3rd Animal: ${animal3.name} is ${animal3.category} with ${animal3.weight} Kg, and have ${animal3.flySpeed} fly speed");
+
+  animal3.food = 3;
+
+  debugPrint("final ${animal3.name} weight is ${animal3.weight}");
 }
+*/

@@ -1,6 +1,8 @@
 # **Chapter 2 : Dart Fundamental**
 ## **1. What is Dart?**
 Dart is Programming Language to developing flutter SDK.
+
+&emsp;
 ## **2. Characteristic of Dart**
 **a. Static Type**  <br/>
 Dart language need to defined a variable before using it.
@@ -9,7 +11,7 @@ Dart language need to defined a variable before using it.
 var name = "Hello World";
 debugPrint(name);
 ```
-[Practice on `test/widget_test.dart`]
+> [Practice on `test/widget_test.dart`]
 
 **b. Inference Type** <br/>
 Dart can make variable to follow data type from the value, this does not apply if the data type has been given to the variable.
@@ -23,7 +25,7 @@ debugPrint(word);
 String age = 10;
 debugPrint(age);
 ```
-[Practice on `test/widget_test.dart`]
+> [Practice on `test/widget_test.dart`]
 
 **c. String Expression / String Interpolation** <br/>
 Dart can use ($) symbol to show all type of variable into the string.
@@ -33,11 +35,12 @@ var word = "Hello World";
 String name = "Alex";
 debugPrint("$word and how are you $name");
 ```
-[Practice on `test/widget_test.dart`]
+> [Practice on `test/widget_test.dart`]
 
 **d. Object Oriented Programming / OOP** <br/>
 Dart supports object-oriented programming features like classes, interfaces, etc.
 
+&emsp;
 ## **3. Data Type**
 this is a list of Data Type in Dart language :
 String    = `String`
@@ -104,6 +107,7 @@ double age2 = 40.8;
       //Result is 40
 ```
 
+&emsp;
 ## **4. Final & Const**
 Final will defined as fixed variable and cant be changed.
 
@@ -121,6 +125,7 @@ void main() {
 }
 ```
 
+&emsp;
 ## **5. Comments**
 Comments `//... or /*...*/` will make project code more clean and will help other developers to understand the code, also with comment you can make under development will not executed by flutter.
 ```dart
@@ -141,6 +146,7 @@ comments
 */
 ```
 
+&emsp;
 ## **6. Function**
 Dart will execute the code only inside the function.
 ```dart
@@ -157,6 +163,7 @@ int functionName(int a, int b) {
 }
 ```
 
+&emsp;
 ## **7. Syncronous (sync) and Asyncronous (async)**
 there are 2 types of data processing in dart.
 
@@ -188,6 +195,7 @@ void async1() {
       */
 ```
 
+&emsp;
 ## **8. Exception**
 It is Dart feature to except other data type or function.
 
@@ -211,7 +219,9 @@ void main() {
       }
 }
 ```
+> [Practice on `test/widget_test.dart`]
 
+&emsp;
 ## **9. Loop**
 Dart Loop is used to run a block of code repetitively for a given number of times or until matches the specified condition. there is 2 type in dart loop :
 
@@ -247,8 +257,9 @@ void main() {
       }
 }
 ```
-[Practice on `test/widget_test.dart`]
+> [Practice on `test/widget_test.dart`]
 
+&emsp;
 ## **10. Conditional Expression**
 Also Called "Ternary Operator" or it's simplify of **if-else Statement** to compire a statement from other data.
 
@@ -300,6 +311,7 @@ void main() {
       */
 ```
 
+&emsp;
 ## **11. Collections**
 Collections is Dart variable it can be included more than 1 data.
 
@@ -372,11 +384,13 @@ void main() {
 }
 //Note :
       /*
-      a. Spread Collection is to add more data into the new data collection from previous collection, to use it jus add 3 dots before previous collection name.
+      a. Spread Collection is to add more data into the new data collection from previous collection, 
+      to use it jus add 3 dots before previous collection name.
       b. Spread Collection can use with List[] and Set{}.
       */
 ```
 
+&emsp;
 ## **12. Null Safety**
 Null Safety is Dart feature to know about error by null value. there is 3 type new syntax **!, ?, late**.
 
@@ -429,12 +443,14 @@ void paramName(String? paramname) {
 }
 ```
 
+&emsp;
 ## **13. Object Oriented Programming (OOP)**
 <p>
 OOP or Object Oriented Programming paradigm is to make everything is object secquently and very helpful in manageable dart project because with this concepts will make the project easy to use 
 and maintenance.
 </p>
 
+&emsp;
 ## **14. Class**
 Class is a part of OOP Paradigm.
 ```dart
@@ -651,4 +667,112 @@ class Cloth {
 }
 ``` 
 
-## **15. Inheritance & Abstract Class**
+&emsp;
+## **15. Inheritance Class**
+Basically In heritance in how to make class code is more simple to understand and simple to use because this is part of OOP in dart.
+
+> [See example of without Inheritence on `test/S2 E15/noinheritence.dart`]
+
+if you have unique data that need specific attribute, you must add it manualy to attribute class section also with it constructor, like below :
+
+```dart
+class Animal {
+  //Attribute
+  String? name;
+  String? category;
+  late int _weight;
+  int? runSpeed;
+  int? swimSpeed;
+  int? flySpeed;
+
+  //Constructor
+  Animal({
+    required this.name,
+    required int weight,
+    this.category,
+    this.runSpeed,
+    this.swimSpeed,
+    this.flySpeed,
+  }) {
+    _weight = weight;
+  }
+
+  //getter Method
+  get weight => _weight;
+
+  //Setter Method
+  set food(int foodWeight) {
+    _weight = _weight + foodWeight;
+  }
+}
+```
+
+so, in order to make inheritence class you must separate between general attribute class and specific
+attribute class.
+
+> [ See example of general attribute class on `test/S2 E15/parent.dart`]
+```dart
+class Animal {
+  //General attribute
+  String? name;
+  String? category;
+  late int _weight;
+
+  //General constructor
+  Animal({
+    required this.name,
+    required int weight,
+    this.category,
+  })
+}
+```
+
+after you defined general attribute class, this is what of Inheritence Class mean. the purpose of it, so inheritence class can be extended to other specific class that need same attribute by just import the inheritence class file.
+
+> [ See example of specific attribute class on <br>
+`test/S2 E15/land.dart`, <br>
+`test/S2 E15/water.dart`, <br>
+`test/S2 E15/air.dart` <br>
+]
+
+```dart
+//example from land.dart
+import "parent.dart";
+
+class Mamals extends Animal {
+  // specific attribute
+  int? runSpeed;
+  String? name;
+  
+  //specific constructor
+  Mamals({this.runSpeed, required this.name, required int weight})
+      : super(
+          weight: weight,
+          category: "Land Base",
+        );
+}
+
+//Note :
+      /*
+            super : is value of exetended class from Inheitence class
+      */
+```
+
+after you make specific attribute class that extended from inheritence class, now you can use it for data that matches in the specific attribute by just import specific attribute class file without importing inheritence class file again.
+
+> [ See example of general attribute class on `test/widget_test.dart`]
+
+&emsp;
+## **16. Abstract Class**
+If you use Inheritence Class, there is chance to call the Inheritence class without the specific attribute class, wich is cause to be error and to prevent this is happen you can add `abstract` in front of Inheritence class. so you cant use directly to inheritence class.
+
+```dart
+abstract class Animal {
+  //Attribute
+      ...
+  //Constructor
+      ...
+}
+```
+
+> [ See example of abstract class on `test/S2 E15/parent.dart`]
