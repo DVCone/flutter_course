@@ -123,11 +123,11 @@ import 'S2 E15/water.dart';
 void main() {
   //attribute value
   Mamals animal1 =
-      Mamals(
-        name: "Lion",
-        weight: 10, 
-        runSpeed: 4,
-      );
+    Mamals(
+      name: "Lion",
+      weight: 10, 
+      runSpeed: 4,
+    );
 
   //output
   debugPrint(
@@ -166,5 +166,27 @@ void main() {
   animal3.food = 3;
 
   debugPrint("final ${animal3.name} weight is ${animal3.weight}");
+}
+*/
+
+//Example of Mixin
+/*
+import './S2 E15/amphibi.dart';
+
+void main() {
+  Reptile animal4 = Reptile(
+    name: "Aligator",
+    weight: 10,
+  );
+
+  animal4.setRun = 13;
+  animal4.setSwim = 20;
+
+  debugPrint(
+      "3rd Animal: ${animal4.name} is ${animal4.category} with ${animal4.weight} Kg, and can run in ${animal4.run} m/h and swim in ${animal4.swim} m/h");
+
+  animal4.food = 3;
+
+  debugPrint("final ${animal4.name} weight is ${animal4.weight}");
 }
 */

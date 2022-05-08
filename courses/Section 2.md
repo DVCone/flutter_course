@@ -43,7 +43,7 @@ Dart supports object-oriented programming features like classes, interfaces, etc
 &emsp;
 ## **3. Data Type**
 this is a list of Data Type in Dart language :
-String    = `String`
+- String    = `String`
 - Boolean   = `bool`
 - Number    = `num`
 - Integer   = `int`
@@ -307,7 +307,8 @@ void main() {
 
 //Note: 
       /*
-            Every [case] must be [break;] to stop process the next case. but in [default] it can run without [break;] because it's ;last statement.
+            Every [case] must be [break;] to stop process to the next case. 
+            but in [default] it can run without [break;] because it's ;last statement.
       */
 ```
 
@@ -357,7 +358,8 @@ void main() {
 }
 //Note :
       /*
-      Set can't use index "debugPrint('${biology[0]}');". but Set is use ".elementAt()". you can use Set as intersection or union, ect.
+      Set can't use index "debugPrint('${biology[0]}');". but Set is use ".elementAt()". 
+      you can use Set as intersection or union, ect.
       */
 ```
 
@@ -776,3 +778,123 @@ abstract class Animal {
 ```
 
 > [ See example of abstract class on `test/S2 E15/parent.dart`]
+
+&emsp;
+## **17. Mixin**
+To understand what Mixin mean, let's back to Inheritence class Example. there is 3 different category of animals defined by ability speed: 
+- land = run speed attribute
+> [ See on `test/S2 E15/land.dart`]
+- water = swim speed attribute
+> [ See on `test/S2 E15/water.dart`]
+- air = fly speed attribute
+> [ See on `test/S2 E15/fly.dart`]
+
+now, how about a animal that can live both in land and water like reptile ect. so we make new category of animal called amphibi. this type animal have ability to run and swim so they need land animal attribute and water animal attribute.
+> [ See on `test/S2 E15/amphibi.dart`]
+
+make this work, OOP dart have ability to separate the attribute class. so, we make 3 individual attribute class in 3 different file :
+
+```dart
+mixin RunSpeed {
+  int? _runSpeed = 0;
+
+  set setRun(int runSpeed) {
+    _runSpeed = runSpeed;
+  }
+
+  int? get run => _runSpeed;
+}
+```
+
+> [ See on `test/S2 E15/mixin/run_speed.dart`] <br>
+[ See on `test/S2 E15/mixin/swim_speed.dart`] <br>
+[ See on `test/S2 E15/mixin/fly_speed.dart`]
+
+after that, we just call the extended class for the specific attribute without need to defined the ability attribute again amphibi file.
+
+```dart
+//inheritence class
+import "parent.dart";
+
+//mixin class
+import './mixin/run_speed.dart';
+import './mixin/swim_speed.dart';
+
+
+class Reptile extends Animal with RunSpeed, SwimSpeed {
+  //attribute
+  String? name;
+
+  //constructor
+  Reptile({required this.name, required int weight})
+      : super(
+          weight: weight,
+          category: "Amphibi Base",
+        );
+}
+```
+
+Note :
+1. dont forget to Import the mixin file
+2. to use more attribute class in mixin just add the class name after :
+
+```dart
+class ... extends ... with mixin1, mixin2, mixin3 {
+
+}
+```
+to use the mixin class in output, you just call the class after using amphibi class.
+> [Practice on `test/widget_test.dart`]
+
+&emsp;
+## **18. Enum**
+Enum is OOP standard to make easy for search big data in list or other data type without remembering order of the data.
+let's say we have this data :
+
+> 0 = "cat",<br>
+1 = "dog",<br>
+2 = "lion",<br>
+else = "unkwon"
+
+Example without using enum :
+```dart
+
+//variable search
+var animal = 1;
+
+//data condition
+void main() {
+      if(animal == 0){
+            debugPrint("cat");
+      } else if(animal == 1){
+            debugPrint("dog");
+      } else if(animal == 2){
+            debugPrint("lion");
+      } else {
+            debugPrint("unknown");
+      }
+}
+```
+
+after using Enum :
+```dart
+//enum data list
+enum animal {cat, dog, lion, unknown}
+
+void main() {
+  
+  //variable search
+  var animals = animal.cat;
+  
+  //data condition
+  if(animals == animal.cat){
+      debugPrint("cat");
+  } else if(animals == animal.dog){
+      debugPrint("dog");
+  } else if(animals == animal.lion){
+      debugPrint("lion");
+  } else {
+      debugPrint("unknown");
+  }
+}
+```

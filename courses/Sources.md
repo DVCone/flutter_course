@@ -17,8 +17,8 @@
 <br/> E12   &emsp;: https://youtu.be/wKGw_EjD1wc
 <br/> E13   &emsp;: https://youtu.be/OBGVpJXoxHM
 <br/> E14   &emsp;: https://youtu.be/KUHFBIcgG88
-<br/> E15   &emsp;: 
-<br/> E16   &emsp;: 
+<br/> E15   &emsp;: https://youtu.be/2e0Wd_XH0Sk
+<br/> E16   &emsp;: https://youtu.be/VImbVai01j0
 
 &emsp;
 ## Season 3
