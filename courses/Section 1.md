@@ -1,4 +1,4 @@
-# **Chapter 1 : Introduction**
+# **Section 1 : Introduction**
 ## What is flutter?
 Flutter is Software Development Kit to create multiple aplications (Website, Android Mobile, Ios Apps, even Desktop Apps) with Single Base Code, Flutter is Open-source project that maintain by Google since 2018 using Dart Programming language instead of Javascript.
 

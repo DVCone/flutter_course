@@ -1,14 +1,14 @@
 ## Course Index
 
 &emsp;
-## Chapter 1: Introduction 
+## Section 1: Introduction 
 
 1. What is flutter?
 2. Prepare the kit!
 3. Create and run first flutter project
 
 &emsp;
-## Chapter 2: Dart Fundamental
+## Section 2: Dart Fundamental
 
 1. What is Dart?
 2. Characteristic of Dart
@@ -51,3 +51,23 @@
 16. Abstract Class
 17. Mixin Class
 18. Enum 
+
+&emsp;
+## Section 3: Flutter Basic
+
+1. Hello World
+2. Widget Basic
+      1. MaterialApp
+      2. Scaffold
+      3. AppBar
+      4. Container
+      5. Text
+      6. FlutterLogo
+      7. ElevatedButton
+      8. Icon
+      9. Image
+3. Visible & Invisible Widget
+      1. visible widget
+      2. invisible widget (layouting widget)
+            1. center
+            2. column

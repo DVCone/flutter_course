@@ -1,4 +1,4 @@
-# **Chapter 2 : Dart Fundamental**
+# **Section 2 : Dart Fundamental**
 ## **1. What is Dart?**
 Dart is Programming Language to developing flutter SDK.
 
@@ -11,7 +11,7 @@ Dart language need to defined a variable before using it.
 var name = "Hello World";
 debugPrint(name);
 ```
-> [Practice on `test/widget_test.dart`]
+> [Practice on `test/S2 E15/s2_examples.dart`]
 
 **b. Inference Type** <br/>
 Dart can make variable to follow data type from the value, this does not apply if the data type has been given to the variable.
@@ -25,7 +25,7 @@ debugPrint(word);
 String age = 10;
 debugPrint(age);
 ```
-> [Practice on `test/widget_test.dart`]
+> [Practice on `test/S2 E15/s2_examples.dart`]
 
 **c. String Expression / String Interpolation** <br/>
 Dart can use ($) symbol to show all type of variable into the string.
@@ -35,7 +35,7 @@ var word = "Hello World";
 String name = "Alex";
 debugPrint("$word and how are you $name");
 ```
-> [Practice on `test/widget_test.dart`]
+> [Practice on `test/S2 E15/s2_examples.dart`]
 
 **d. Object Oriented Programming / OOP** <br/>
 Dart supports object-oriented programming features like classes, interfaces, etc.
@@ -219,7 +219,7 @@ void main() {
       }
 }
 ```
-> [Practice on `test/widget_test.dart`]
+> [Practice on `test/S2 E15/s2_examples.dart`]
 
 &emsp;
 ## **9. Loop**
@@ -257,7 +257,7 @@ void main() {
       }
 }
 ```
-> [Practice on `test/widget_test.dart`]
+> [Practice on `test/S2 E15/s2_examples.dart`]
 
 &emsp;
 ## **10. Conditional Expression**
@@ -762,7 +762,7 @@ class Mamals extends Animal {
 
 after you make specific attribute class that extended from inheritence class, now you can use it for data that matches in the specific attribute by just import specific attribute class file without importing inheritence class file again.
 
-> [ See example of general attribute class on `test/widget_test.dart`]
+> [ See example of general attribute class on `test/S2 E15/s2_examples.dart`]
 
 &emsp;
 ## **16. Abstract Class**
@@ -844,7 +844,7 @@ class ... extends ... with mixin1, mixin2, mixin3 {
 }
 ```
 to use the mixin class in output, you just call the class after using amphibi class.
-> [Practice on `test/widget_test.dart`]
+> [Practice on `test/S2 E15/s2_examples.dart`]
 
 &emsp;
 ## **18. Enum**
