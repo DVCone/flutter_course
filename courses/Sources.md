@@ -23,7 +23,7 @@
 &emsp;
 ## section 3 : Flutter Basic
 <br/> E1    &ensp;&emsp;: https://youtu.be/JIC73q5H02Q
-<br/> E2    &ensp;&emsp;: 
+<br/> E2    &ensp;&emsp;: https://youtu.be/h8b17A2eC2Q
 <br/> E3    &ensp;&emsp;: 
 <br/> E4    &ensp;&emsp;: 
 <br/> E5    &ensp;&emsp;: 
