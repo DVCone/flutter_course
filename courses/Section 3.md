@@ -47,8 +47,8 @@ class MyApp extends StatelessWidget {
 ## **2. Widget Basic**
 Every class in flutter is a widget. to get better in flutter you must know every widget as much as possible.
 
-**a. MaterialApp** <br/>
-this is the most important widget in flutter, because MaterialApp widget is a base for make aplication layout.
+**a. MaterialApp** 
+<br/> this is the most important widget in flutter, because MaterialApp widget is a base for make aplication layout.
 
 to use MaterialApp widget you can import it into the file :
 ```dart
@@ -68,8 +68,8 @@ class MyApp extends StatelessWidget {
 ```
 > [Practice on `test/examples/s3.dart`]
 
-**b.Scaffold** <br/>
-Scaffold widget is also important as the MaterialApp widget, but Scaffold is use for a canvas of aplication layout. without it, the layout will be black screen.
+**b.Scaffold** 
+<br/> Scaffold widget is also important as the MaterialApp widget, but Scaffold is use for a canvas of aplication layout. without it, the layout will be black screen.
 ```dart
 import 'package:flutter/material.dart';
 
@@ -89,8 +89,8 @@ class MyApp extends StatelessWidget {
 ```
 > [Practice on `test/examples/s3.dart`]
 
-**c. AppBar** <br/>
-AppBar is like header on top of the aplication or like navbar in web layout, in flutter you can custom the AppBar whatever you need. changing background color, giving app title, even make drawer menu. there is a explanation section about drawer menu widget.
+**c. AppBar** 
+<br/> AppBar is like header on top of the aplication or like navbar in web layout, in flutter you can custom the AppBar whatever you need. changing background color, giving app title, even make drawer menu. there is a explanation section about drawer menu widget.
 
 AppBar widget is using only inside of scaffold widget.
 ```dart
@@ -113,8 +113,8 @@ Widget build(BuildContext context) {
 ```
 > [Practice on `test/examples/s3.dart`]
 
-**d. Container & SizedBox** <br/>
-Container is a widget that combines common painting, positioning, and sizing widgets, like a div() box in web layout.
+**d. Container & SizedBox** 
+<br/> Container is a widget that combines common painting, positioning, and sizing widgets, like a div() box in web layout.
 
 SizedBox is look same as container but the different it's fixed size box. The [width] and [height] parameters can be null to indicate that the size of the box should not be constrained in the corresponding dimension.
 ```dart
@@ -136,8 +136,8 @@ SizedBox is look same as container but the different it's fixed size box. The [w
 ```
 > [Practice on `test/examples/s3.dart`]
 
-**e. Text** <br/>
-This is a ecential widget in every programming language, to use a text you must use the text class from flutter.
+**e. Text** 
+<br/> This is a ecential widget in every programming language, to use a text you must use the text class from flutter.
 ```dart
 //Text widget
 const Text(
@@ -152,8 +152,8 @@ const Text(
 ```
 > [Practice on `test/examples/s3.dart`]
 
-**f. FlutterLogo** <br/>
-this is a original widget that will give you a flutter logo image by calling it's class.
+**f. FlutterLogo** 
+<br/> this is a original widget that will give you a flutter logo image by calling it's class.
 ```dart
 Container(
   width: 200,
@@ -167,11 +167,11 @@ Container(
 ```
 > [Practice on `test/examples/s3.dart`]
 
-**g. Button** <br/>
-there is 3 types of button in flutter.
+**g. Button** 
+<br/> there is 3 types of button in flutter.
 
-1. ElevatedButton <br/>
-In old version of flutter this type of button is called `RaisedButton`.
+1. ElevatedButton 
+<br/> In old version of flutter this type of button is called `RaisedButton`.
 ```dart
 ElevatedButton(
   style: raisedButtonStyle,
@@ -181,8 +181,8 @@ ElevatedButton(
 ```
 > [Practice on `test/examples/s3.dart`]
 
-2. TextButton <br/>
-In old version of flutter this type of button is called `FlatButton`.
+2. TextButton 
+<br/> In old version of flutter this type of button is called `FlatButton`.
 ```dart
 TextButton(
   style: flatButtonStyle,
@@ -190,8 +190,8 @@ TextButton(
   child: Text('Looks like a FlatButton'),
 )
 ```
-3. OutlinedButton <br/>
-In old version of flutter this type of button is called `OutlineButton`.
+3. OutlinedButton 
+<br/> In old version of flutter this type of button is called `OutlineButton`.
 ```dart
 OutlinedButton(
   style: outlineButtonStyle,
@@ -200,8 +200,8 @@ OutlinedButton(
 )
 ```
 
-**h. Icon** <br/>
-Flutter was included MaterialIcon assets, you can use the Icon by calling it's class.
+**h. Icon** 
+<br/> Flutter was included MaterialIcon assets, you can use the Icon by calling it's class.
 ```dart
 Icon(
   //Icon type
@@ -233,11 +233,11 @@ ElevatedButton.icon(
 ```
 > [Practice on `test/examples/s3.dart`]
 
-**i. Image** <br/>
-there is 4 ways to use image in flutter.
+**i. Image** 
+<br/> there is 4 ways to use image in flutter.
 
-1. image provider <br/>
-to use image with image provider you need to follow certain instructions:
+1. image provider 
+<br/> to use image with image provider you need to follow certain instructions:
   - make a image folder in flutter project
   - register your image folder in pubspec.yaml at the asset section
   - store your image inside image folder
@@ -253,8 +253,8 @@ Image.asset("image path"),
 ```
 > [Practice on `test/examples/s3.dart`]
 
-2. Image Network <br/>
-to use image by image network, make sure your app have internet connection when build and using it, because the image need internet connection to load.
+2. Image Network 
+<br/> to use image by image network, make sure your app have internet connection when build and using it, because the image need internet connection to load.
 ```dart
 const Image(
   image: NetworkImage("place a url in hire"),
@@ -282,5 +282,6 @@ Image.memory(bytes),
 
 &emsp;
 ## **3. Visible & Invisible Widget**
-1. Visible Widget <br/>
-is like 
+1. Visible Widget 
+<br/> Visible widget is the widget that can be visible in the eye and give the direct effect in aplication layout. <br> the example of visible widget is like most widget what we learn before, from `Container()`, `Text()`, `Image()`, `Icon()`, ect.
+

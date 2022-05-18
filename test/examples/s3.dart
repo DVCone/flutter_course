@@ -1,6 +1,8 @@
 //import MaterialApp widget
 import 'package:flutter/material.dart';
 
+///if you click this -> [MyApp] it will bring you to MyApp Class name
+
 //Flutter class
 void main() {
   runApp(const MyApp());
