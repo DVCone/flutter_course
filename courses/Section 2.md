@@ -4,8 +4,8 @@ Dart is Programming Language to developing flutter SDK.
 
 &emsp;
 ## **2. Characteristic of Dart**
-**a. Static Type**  <br/>
-Dart language need to defined a variable before using it.
+**a. Static Type**
+<br/> Dart language need to defined a variable before using it.
 ```dart
 //example: 
 var name = "Hello World";
@@ -13,8 +13,8 @@ debugPrint(name);
 ```
 > [Practice on `test/examples/s2.dart`]
 
-**b. Inference Type** <br/>
-Dart can make variable to follow data type from the value, this does not apply if the data type has been given to the variable.
+**b. Inference Type**
+<br/> Dart can make variable to follow data type from the value, this does not apply if the data type has been given to the variable.
 ```dart
 example:
 /// this variable automatically defined as String
@@ -27,8 +27,8 @@ debugPrint(age);
 ```
 > [Practice on `test/examples/s2.dart`]
 
-**c. String Expression / String Interpolation** <br/>
-Dart can use ($) symbol to show all type of variable into the string.
+**c. String Expression / String Interpolation**
+<br/> Dart can use ($) symbol to show all type of variable into the string.
 ```dart
 //example:
 var word = "Hello World";
@@ -37,8 +37,8 @@ debugPrint("$word and how are you $name");
 ```
 > [Practice on `test/examples/s2.dart`]
 
-**d. Object Oriented Programming / OOP** <br/>
-Dart supports object-oriented programming features like classes, interfaces, etc.
+**d. Object Oriented Programming / OOP**
+<br/> Dart supports object-oriented programming features like classes, interfaces, etc.
 
 &emsp;
 ## **3. Data Type**
@@ -167,11 +167,11 @@ int functionName(int a, int b) {
 ## **7. Syncronous (sync) and Asyncronous (async)**
 there are 2 types of data processing in dart.
 
-**a. Syncronous (sync) = series** <br/>
-if there are 2 processing route (ex: route 1, route 2), syncronous will only process one route and stop the other one.
+**a. Syncronous (sync) = series**
+<br/> if there are 2 processing route (ex: route 1, route 2), syncronous will only process one route and stop the other one.
 
-**b. Asyncronous (async) = parallel** <br/>
-if there are 2 processing route (ex: route 1, route 2), asyncronous will process one route and the other route is still processing.
+**b. Asyncronous (async) = parallel**
+<br/> if there are 2 processing route (ex: route 1, route 2), asyncronous will process one route and the other route is still processing.
 ```dart
 //example of syncronous
 void main() {
@@ -225,7 +225,7 @@ void main() {
 ## **9. Loop**
 Dart Loop is used to run a block of code repetitively for a given number of times or until matches the specified condition. there is 2 type in dart loop :
 
-**a. For loop** <br/>
+**a. For loop**
 ```dart
 void main() {
       for(int i = 1; i <= 5; i++) {
@@ -237,7 +237,7 @@ void main() {
       }
 }
 ```
-**b. Do-While Loop** <br/>
+**b. Do-While Loop**
 ```dart
 void main() {
       int i = 1;
@@ -247,7 +247,7 @@ void main() {
       } while(i <= 10);
 }
 ```
-**c. List Loop** <br/>
+**c. List Loop**
 ```dart
 void main() {
       List<String> animal = ['cat', 'dog', 'fish'];
@@ -731,10 +731,10 @@ class Animal {
 
 after you defined general attribute class, this is what of Inheritence Class mean. the purpose of it, so inheritence class can be extended to other specific class that need same attribute by just import the inheritence class file.
 
-> [ See example of specific attribute class on <br>
-`test/S2 E15/land.dart`, <br>
-`test/S2 E15/water.dart`, <br>
-`test/S2 E15/air.dart` <br>
+> [ See example of specific attribute class on 
+<br> `test/S2 E15/land.dart`, 
+<br> `test/S2 E15/water.dart`,
+<br> `test/S2 E15/air.dart` 
 ]
 
 ```dart
@@ -806,9 +806,9 @@ mixin RunSpeed {
 }
 ```
 
-> [ See on `test/S2 E15/mixin/run_speed.dart`] <br>
-[ See on `test/S2 E15/mixin/swim_speed.dart`] <br>
-[ See on `test/S2 E15/mixin/fly_speed.dart`]
+> [ See on `test/S2 E15/mixin/run_speed.dart`]
+<br> [ See on `test/S2 E15/mixin/swim_speed.dart`] 
+<br> [ See on `test/S2 E15/mixin/fly_speed.dart`]
 
 after that, we just call the extended class for the specific attribute without need to defined the ability attribute again amphibi file.
 
@@ -851,10 +851,10 @@ to use the mixin class in output, you just call the class after using amphibi cl
 Enum is OOP standard to make easy for search big data in list or other data type without remembering order of the data.
 let's say we have this data :
 
-> 0 = "cat",<br>
-1 = "dog",<br>
-2 = "lion",<br>
-else = "unkwon"
+> 0 = "cat",
+<br> 1 = "dog",
+<br> 2 = "lion",
+<br> else = "unkwon"
 
 Example without using enum :
 ```dart

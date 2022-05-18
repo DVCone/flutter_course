@@ -89,7 +89,7 @@ class MyApp extends StatelessWidget {
 ```
 > [Practice on `test/examples/s3.dart`]
 
-**c. AppBar** 
+**c. AppBar**
 <br/> AppBar is like header on top of the aplication or like navbar in web layout, in flutter you can custom the AppBar whatever you need. changing background color, giving app title, even make drawer menu. there is a explanation section about drawer menu widget.
 
 AppBar widget is using only inside of scaffold widget.
@@ -283,5 +283,7 @@ Image.memory(bytes),
 &emsp;
 ## **3. Visible & Invisible Widget**
 1. Visible Widget 
-<br/> Visible widget is the widget that can be visible in the eye and give the direct effect in aplication layout. <br> the example of visible widget is like most widget what we learn before, from `Container()`, `Text()`, `Image()`, `Icon()`, ect.
+<br/> Visible widget is the widget that can be visible by eye and give the direct effect in aplication layout. <br> example of visible widget is like most widget what we learn before, from `Container()`, `Text()`, `Image()`, `Icon()`, ect.
 
+2. Invisible Widget
+<br/> In otherhand, invisible widget is the widget that not visible by eye, so the widget can't give direct effect to the aplication layout, this widget need the visible widget to know about it's function. <br> example of the invisible widget is like the flutter builder widget: `MaterialApp()`, `Scaffold()`, `Column()`, `Row()`. ect.

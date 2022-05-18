@@ -71,3 +71,8 @@
       2. invisible widget (layouting widget)
             1. center
             2. column
+            3. Row 
+            4. Stack
+            5. SingleChildScrollView
+            6. ListView
+            7. GridView 
