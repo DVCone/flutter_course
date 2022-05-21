@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         //background color data class type
         /* backgroundColor: Colors.cyan, */
 
-        //background color data class type + contrass
+        //background color data class type + contrast
         backgroundColor: Colors.cyan[800], 
 
         //invisible widget center
@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
 Every class in flutter is a widget. to get better in flutter you must know every widget as much as possible.
 
 **a. MaterialApp** 
-<br/> this is the most important widget in flutter, because MaterialApp widget is a base for make aplication layout.
+<br/> this is the most important widget in flutter, because MaterialApp widget is a base for make application layout.
 
 to use MaterialApp widget you can import it into the file :
 ```dart
@@ -69,7 +69,8 @@ class MyApp extends StatelessWidget {
 > [Practice on `test/examples/s3.dart`]
 
 **b.Scaffold** 
-<br/> Scaffold widget is also important as the MaterialApp widget, but Scaffold is use for a canvas of aplication layout. without it, the layout will be black screen.
+<br/> Scaffold widget is also important as the MaterialApp widget, but Scaffold is use for a canvas of application layout. without it, the layout will be black screen.
+
 ```dart
 import 'package:flutter/material.dart';
 
@@ -90,7 +91,7 @@ class MyApp extends StatelessWidget {
 > [Practice on `test/examples/s3.dart`]
 
 **c. AppBar**
-<br/> AppBar is like header on top of the aplication or like navbar in web layout, in flutter you can custom the AppBar whatever you need. changing background color, giving app title, even make drawer menu. there is a explanation section about drawer menu widget.
+<br/> AppBar is like header on top of the application or like navbar in web layout, in flutter you can custom the AppBar whatever you need. changing background color, giving app title, even make drawer menu. there is a explanation section about drawer menu widget.
 
 AppBar widget is using only inside of scaffold widget.
 ```dart
@@ -98,7 +99,7 @@ AppBar widget is using only inside of scaffold widget.
 Widget build(BuildContext context) {
   return MaterialApp(
     home: Scaffold(
-      //appbar widget
+      //AppBar widget
       appBar: AppBar(
         title: const Text(
           "Fist App",
@@ -137,7 +138,8 @@ SizedBox is look same as container but the different it's fixed size box. The [w
 > [Practice on `test/examples/s3.dart`]
 
 **e. Text** 
-<br/> This is a ecential widget in every programming language, to use a text you must use the text class from flutter.
+<br/> This is a essential widget in every programming language, to use a text you must use the text class from flutter.
+
 ```dart
 //Text widget
 const Text(
@@ -154,6 +156,7 @@ const Text(
 
 **f. FlutterLogo** 
 <br/> this is a original widget that will give you a flutter logo image by calling it's class.
+
 ```dart
 Container(
   width: 200,
@@ -172,6 +175,7 @@ Container(
 
 1. ElevatedButton 
 <br/> In old version of flutter this type of button is called `RaisedButton`.
+
 ```dart
 ElevatedButton(
   style: raisedButtonStyle,
@@ -183,6 +187,7 @@ ElevatedButton(
 
 2. TextButton 
 <br/> In old version of flutter this type of button is called `FlatButton`.
+
 ```dart
 TextButton(
   style: flatButtonStyle,
@@ -192,6 +197,7 @@ TextButton(
 ```
 3. OutlinedButton 
 <br/> In old version of flutter this type of button is called `OutlineButton`.
+
 ```dart
 OutlinedButton(
   style: outlineButtonStyle,
@@ -202,6 +208,7 @@ OutlinedButton(
 
 **h. Icon** 
 <br/> Flutter was included MaterialIcon assets, you can use the Icon by calling it's class.
+
 ```dart
 Icon(
   //Icon type
@@ -213,6 +220,7 @@ Icon(
 ),
 ```
 you can use icon in certain widget like inside elevatedButton.
+
 ```dart
 ElevatedButton.icon(
   //Button Function
@@ -242,7 +250,7 @@ ElevatedButton.icon(
   - register your image folder in pubspec.yaml at the asset section
   - store your image inside image folder
 
-after following the instruction you can call it by the class
+after following the instruction you can call it by the class :
 ```dart
 //Image provider widget
 const Image(
@@ -255,6 +263,7 @@ Image.asset("image path"),
 
 2. Image Network 
 <br/> to use image by image network, make sure your app have internet connection when build and using it, because the image need internet connection to load.
+
 ```dart
 const Image(
   image: NetworkImage("place a url in hire"),
@@ -282,8 +291,110 @@ Image.memory(bytes),
 
 &emsp;
 ## **3. Visible & Invisible Widget**
-1. Visible Widget 
-<br/> Visible widget is the widget that can be visible by eye and give the direct effect in aplication layout. <br> example of visible widget is like most widget what we learn before, from `Container()`, `Text()`, `Image()`, `Icon()`, ect.
+**a. Visible Widget** 
+<br/> Visible widget is the widget that can be visible by eye and give the direct effect in application layout. <br> example of visible widget is like most widget what we learn before, from `Container()`, `Text()`, `Image()`, `Icon()`, ect.
 
-2. Invisible Widget
-<br/> In otherhand, invisible widget is the widget that not visible by eye, so the widget can't give direct effect to the aplication layout, this widget need the visible widget to know about it's function. <br> example of the invisible widget is like the flutter builder widget: `MaterialApp()`, `Scaffold()`, `Column()`, `Row()`. ect.
+**b. Invisible Widget**
+<br/> In other hand, invisible widget is the widget that not visible by eye, so the widget can't give direct effect to the application layout, this widget need the visible widget to know about it's function. 
+ This is example of the invisible widget from builder widget: `MaterialApp()`, `Scaffold()`, ect.
+<br><br> but There is invisible widget other than that like some widget below :
+
+1. `Center()`
+<br> this is a invisible widget to make object like other widget inside it to be center in alignment.
+
+```dart
+const Center(
+  child: Text(
+    'This text is inside invisible center widget',
+  ),
+),
+```
+
+2. `Column()`
+<br> this is a invisible widget to arrange group of object inside of it vertically.
+
+```dart
+Column(
+  children: [
+    const Container(
+      height: 250
+      width: 250
+      color: Colors.pink
+      child: Text(
+        'this 1st text will arrange vertically',
+      ),
+    ),
+    const Container(
+      height: 250
+      width: 250
+      color: Colors.cyan
+      child: Text(
+        'this 2nd text will arrange vertically',
+      ),
+    ),
+    const Container(
+      height: 250
+      width: 250
+      color: Colors.yellow
+      child: Text(
+        'this 3rd text will arrange vertically',
+      ),
+    ),
+  ],
+),
+```
+
+3. `Row()`
+<br> this is a invisible widget to arrange group of object inside of it horizontally.
+
+```dart
+Row(
+  children: [
+    const Container(
+      height: 250
+      width: 250
+      color: Colors.pink
+      child: Text(
+        'this 1st text will arrange horizontally',
+      ),
+    ),
+    const Container(
+      height: 250
+      width: 250
+      color: Colors.cyan
+      child: Text(
+        'this 2nd text will arrange vertically',
+      ),
+    ),
+    const Container(
+      height: 250
+      width: 250
+      color: Colors.yellow
+      child: Text(
+        'this 3rd text will arrange vertically',
+      ),
+    ),
+  ],
+),
+```
+
+4. `Stack()`
+<br> this widget can stackup bunch of widget in top each other.
+
+```dart
+Stack(
+  children: [
+    Container(
+      child: Image.asset(
+         "assets/image_path.jpg",
+      ),
+    ),
+    Text(
+      'this text will be stack on top of the image',
+    ),
+  ], 
+),
+```
+
+5. `SingleChildScrollView()`
+<br> if we have so much data to display in arrange method like `Column()` or `Row()`

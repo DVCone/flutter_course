@@ -6,6 +6,7 @@ Dart is Programming Language to developing flutter SDK.
 ## **2. Characteristic of Dart**
 **a. Static Type**
 <br/> Dart language need to defined a variable before using it.
+
 ```dart
 //example: 
 var name = "Hello World";
@@ -15,6 +16,7 @@ debugPrint(name);
 
 **b. Inference Type**
 <br/> Dart can make variable to follow data type from the value, this does not apply if the data type has been given to the variable.
+
 ```dart
 example:
 /// this variable automatically defined as String
@@ -29,6 +31,7 @@ debugPrint(age);
 
 **c. String Expression / String Interpolation**
 <br/> Dart can use ($) symbol to show all type of variable into the string.
+
 ```dart
 //example:
 var word = "Hello World";
@@ -54,7 +57,7 @@ this is a list of Data Type in Dart language :
 
 ```dart
 //example:
-String name = "Jhon Doe";     
+String name = "John Doe";     
 int age = 20;                 
 num weight = 60.5;            
 double height = 5;            
@@ -79,14 +82,14 @@ void main() {
 you can process data type in dart language.
 ```dart
 //Example of data type processing
-String name = "Jhon Doe";
+String name = "John Doe";
       //make all string is lowercase
       debugPrint(name.toLowerCase());
-      //result is jhon doe
+      //result is john doe
 
       //make all string is uppercase
       debugPrint(name.toUpperCase());
-      //result is JHON DOE
+      //result is JOHN DOE
 
       //split string from predetermined order
       debugPrint(name.substring(2));
@@ -117,7 +120,7 @@ void main() {
       age = 20;
 }
 ```
-Const must be difened with value and can be changed.
+Const must be divined with value and can be changed.
 ```dart
 void main() {
       const int age = 19;
@@ -133,11 +136,11 @@ Comments `//... or /*...*/` will make project code more clean and will help othe
 
 /* 
 this is 
-mutiple line
+multiple line
 comments
 */
 
-///this is document comment use with brecket [MyApp]
+///this is document comment use with bracket [MyApp]
 
 /**
 * this is 
@@ -156,7 +159,7 @@ void main() {
       functionName(3, 5); 
 }
 
-//variable scoup
+//variable scoop
 int functionName(int a, int b) {
       int result = a * b;
       return result;
@@ -164,24 +167,25 @@ int functionName(int a, int b) {
 ```
 
 &emsp;
-## **7. Syncronous (sync) and Asyncronous (async)**
+## **7. Synchronous (sync) and Asynchronous (async)**
 there are 2 types of data processing in dart.
 
-**a. Syncronous (sync) = series**
-<br/> if there are 2 processing route (ex: route 1, route 2), syncronous will only process one route and stop the other one.
+**a. Synchronous (sync) = series**
+<br/> if there are 2 processing route (ex: route 1, route 2), synchronous will only process one route and stop the other one.
 
-**b. Asyncronous (async) = parallel**
-<br/> if there are 2 processing route (ex: route 1, route 2), asyncronous will process one route and the other route is still processing.
+**b. Asynchronous (async) = parallel**
+<br/> if there are 2 processing route (ex: route 1, route 2), asynchronous will process one route and the other route is still processing.
+
 ```dart
-//example of syncronous
+//example of synchronous
 void main() {
    debugPrint("first execute");
    async1();
-   debugPrint("secound execute");
-   debugPrint("tridh execute");
+   debugPrint("second execute");
+   debugPrint("third execute");
 }
 
-//example of asyncronous
+//example of asynchronous
 void async1() {
       //this is future with anonymous function
       Future({} { 
@@ -191,7 +195,7 @@ void async1() {
 
 //Note: 
       /*
-      you can't execute asyncronous example in widget_test.dart, use dardPad to try it
+      you can't execute asynchronous example in widget_test.dart, use dartPad to try it
       */
 ```
 
@@ -261,21 +265,21 @@ void main() {
 
 &emsp;
 ## **10. Conditional Expression**
-Also Called "Ternary Operator" or it's simplify of **if-else Statement** to compire a statement from other data.
+Also Called "Ternary Operator" or it's simplify of **if-else Statement** to compare a statement from other data.
 
 **a. if-else**
 ```dart
 void main() {
   String name = "Alex";
-  if(name == "Jhon"){
+  if(name == "John"){
         //if statement is wright then go to output
-        debugPrint('He is Jhon');
+        debugPrint('He is John');
   } else if(name == "Peter") {
         //if statement is wrong then check with other statement
         debugPrint('He is Peter');
   } else {
         //if statement is wrong then go to output
-        debugPrint('He isn\'t Jhon or peter, he is $name');
+        debugPrint('He isn\'t John or peter, he is $name');
   }
 }
 ```
@@ -287,8 +291,8 @@ void main() {
 
       switch(name){
             //First Statement check
-            case "Jhon": 
-                  debugPrint("He is Jhon");
+            case "John": 
+                  debugPrint("He is John");
                   break;
             //Second Statement check
             case "Peter": 
@@ -300,7 +304,7 @@ void main() {
                   break;
             //if all the statement is wrong then go to output
             default :
-                  debugPrint("He isn't Jhon or Peter, He is $name");
+                  debugPrint("He isn't John or Peter, He is $name");
                   break;
       }
 }
@@ -399,7 +403,7 @@ Null Safety is Dart feature to know about error by null value. there is 3 type n
 - ? = defined a variable can be null.
 - ?? = to handle null value.
 - ! = defined a variable was not null anymore.
-- late = to ensure there is inialization variable before execute a variable maybe have null value.
+- late = to ensure there is initialization variable before execute a variable maybe have null value.
 
 Null Safety feature is introduce in flutter v.2.12.
 ```dart
@@ -415,7 +419,7 @@ void main() {
 }
 
 String? getName() {
-      return "Jhon";
+      return "John";
 }
 ```
 ```dart
@@ -440,15 +444,15 @@ void main() {
       paramName(name);
 }
 
-void paramName(String? paramname) {
-      debugPrint(paramname);
+void paramName(String? ParamName) {
+      debugPrint(ParamName);
 }
 ```
 
 &emsp;
 ## **13. Object Oriented Programming (OOP)**
 <p>
-OOP or Object Oriented Programming paradigm is to make everything is object secquently and very helpful in manageable dart project because with this concepts will make the project easy to use 
+OOP or Object Oriented Programming paradigm is to make everything is object sequently and very helpful in manageable dart project because with this concepts will make the project easy to use 
 and maintenance.
 </p>
 
@@ -505,7 +509,7 @@ void main() {
 
 //Class Object
 class Cloth {
-      //atribute
+      //attribute
       String? type;
       String? color;
 
@@ -529,11 +533,11 @@ void main() {
 
 //Class Object
 class Cloth {
-      //atribute
+      //attribute
       String? type;
       String? color;
 
-      //named constractor
+      //named constructor
       Cloth({String? types, String? colors}) {
             type = types;
             color = colors;
@@ -552,11 +556,11 @@ void main() {
 
 //Class Object
 class Cloth {
-      //atribute
+      //attribute
       String? type;
       String? color;
 
-      //direct positional constractor
+      //direct positional constructor
       Cloth(this.type, this.color);
 }
 ```
@@ -573,11 +577,11 @@ void main() {
 
 //Class Object
 class Cloth {
-      //atribute
+      //attribute
       String? type;
       String? color;
 
-      //direct named constractor
+      //direct named constructor
       Cloth({this.type, this.color});
 }
 ```
@@ -605,7 +609,7 @@ class Cloth {
       //Private attribute
       String? _color;
 
-      //direct named constractor
+      //direct named constructor
       Cloth({this.type, String? color}) {
             _color = color;
       }
@@ -625,7 +629,7 @@ class Cloth {
       /*
       to make private attribute so it can't be change, add underscore (_) before attribute name.
 
-      private attribute is use for encapsulation to prevent dirrect changes to data value.
+      private attribute is use for encapsulation to prevent direct changes to data value.
       */
 ```
 
@@ -652,7 +656,7 @@ class Cloth {
       //Private attribute
       String? _color;
 
-      //direct named constractor
+      //direct named constructor
       Cloth({this.type, String? color}) {
             _color = color;
       }
@@ -671,11 +675,11 @@ class Cloth {
 
 &emsp;
 ## **15. Inheritance Class**
-Basically In heritance in how to make class code is more simple to understand and simple to use because this is part of OOP in dart.
+Basically Inheritance in how to make class code is more simple to understand and simple to use because this is part of OOP in dart.
 
-> [See example of without Inheritence on `test/S2 E15/noinheritence.dart`]
+> [See example of without Inheritance on `test/S2 E15/noinheritence.dart`]
 
-if you have unique data that need specific attribute, you must add it manualy to attribute class section also with it constructor, like below :
+if you have unique data that need specific attribute, you must add it manually to attribute class section also with it constructor, like below :
 
 ```dart
 class Animal {
@@ -709,7 +713,7 @@ class Animal {
 }
 ```
 
-so, in order to make inheritence class you must separate between general attribute class and specific
+so, in order to make inheritance class you must separate between general attribute class and specific
 attribute class.
 
 > [ See example of general attribute class on `test/S2 E15/parent.dart`]
@@ -729,7 +733,7 @@ class Animal {
 }
 ```
 
-after you defined general attribute class, this is what of Inheritence Class mean. the purpose of it, so inheritence class can be extended to other specific class that need same attribute by just import the inheritence class file.
+after you defined general attribute class, this is what of Inheritance Class mean. the purpose of it, so inheritance class can be extended to other specific class that need same attribute by just import the inheritance class file.
 
 > [ See example of specific attribute class on 
 <br> `test/S2 E15/land.dart`, 
@@ -741,13 +745,13 @@ after you defined general attribute class, this is what of Inheritence Class mea
 //example from land.dart
 import "parent.dart";
 
-class Mamals extends Animal {
+class Mammals extends Animal {
   // specific attribute
   int? runSpeed;
   String? name;
   
   //specific constructor
-  Mamals({this.runSpeed, required this.name, required int weight})
+  Mammals({this.runSpeed, required this.name, required int weight})
       : super(
           weight: weight,
           category: "Land Base",
@@ -756,17 +760,17 @@ class Mamals extends Animal {
 
 //Note :
       /*
-            super : is value of exetended class from Inheitence class
+            super : is value of extended class from Inheritance class
       */
 ```
 
-after you make specific attribute class that extended from inheritence class, now you can use it for data that matches in the specific attribute by just import specific attribute class file without importing inheritence class file again.
+after you make specific attribute class that extended from inheritance class, now you can use it for data that matches in the specific attribute by just import specific attribute class file without importing inheritance class file again.
 
 > [ See example of general attribute class on `test/examples/s2.dart`]
 
 &emsp;
 ## **16. Abstract Class**
-If you use Inheritence Class, there is chance to call the Inheritence class without the specific attribute class, wich is cause to be error and to prevent this is happen you can add `abstract` in front of Inheritence class. so you cant use directly to inheritence class.
+If you use Inheritance Class, there is chance to call the Inheritance class without the specific attribute class, witch is cause to be error and to prevent this is happen you can add `abstract` in front of Inheritance class. so you cant use directly to inheritance class.
 
 ```dart
 abstract class Animal {
@@ -781,7 +785,7 @@ abstract class Animal {
 
 &emsp;
 ## **17. Mixin**
-To understand what Mixin mean, let's back to Inheritence class Example. there is 3 different category of animals defined by ability speed: 
+To understand what Mixin mean, let's back to Inheritance class Example. there is 3 different category of animals defined by ability speed: 
 - land = run speed attribute
 > [ See on `test/S2 E15/land.dart`]
 - water = swim speed attribute
@@ -789,7 +793,7 @@ To understand what Mixin mean, let's back to Inheritence class Example. there is
 - air = fly speed attribute
 > [ See on `test/S2 E15/fly.dart`]
 
-now, how about a animal that can live both in land and water like reptile ect. so we make new category of animal called amphibi. this type animal have ability to run and swim so they need land animal attribute and water animal attribute.
+now, how about a animal that can live both in land and water like reptile ect. so we make new category of animal called amphibian. this type animal have ability to run and swim so they need land animal attribute and water animal attribute.
 > [ See on `test/S2 E15/amphibi.dart`]
 
 make this work, OOP dart have ability to separate the attribute class. so, we make 3 individual attribute class in 3 different file :
@@ -813,7 +817,7 @@ mixin RunSpeed {
 after that, we just call the extended class for the specific attribute without need to defined the ability attribute again amphibi file.
 
 ```dart
-//inheritence class
+//inheritance class
 import "parent.dart";
 
 //mixin class
@@ -835,7 +839,7 @@ class Reptile extends Animal with RunSpeed, SwimSpeed {
 ```
 
 Note :
-1. dont forget to Import the mixin file
+1. don't forget to Import the mixin file
 2. to use more attribute class in mixin just add the class name after :
 
 ```dart
@@ -854,7 +858,7 @@ let's say we have this data :
 > 0 = "cat",
 <br> 1 = "dog",
 <br> 2 = "lion",
-<br> else = "unkwon"
+<br> else = "unknown"
 
 Example without using enum :
 ```dart

@@ -20,7 +20,7 @@
 4. Final & Const
 5. Comments
 6. Function
-7. Syncronous and Asyncronous 
+7. Synchronous and Asynchronous 
       1. sync = series
       2. async = parallel
 8. Exception
@@ -68,7 +68,7 @@
       9. Image
 3. Visible & Invisible Widget
       1. visible widget
-      2. invisible widget (layouting widget)
+      2. invisible widget (layouts widget)
             1. center
             2. column
             3. Row 
