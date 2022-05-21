@@ -397,4 +397,178 @@ Stack(
 ```
 
 5. `SingleChildScrollView()`
-<br> if we have so much data to display in arrange method like `Column()` or `Row()`
+<br> if we have so much data to display in arrange method like `Column()` or `Row()`, with this widget we can make all of that data in one scroll section only without displaying every data inside arrange method widget.
+
+```dart
+SingleChildScrollView(
+  padding: EdgeInsets.all(5.0),
+  child: Column(
+    children: [
+      Text(
+        'Data 1',
+        style: TextStyle(
+          fontSize: 21,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      Text(
+        'Data 2',
+        style: TextStyle(
+          fontSize: 21,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      Text(
+        'Data 3',
+        style: TextStyle(
+          fontSize: 21,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      Text(
+        'Data 4',
+        style: TextStyle(
+          fontSize: 21,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      Text(
+        'Data 5',
+        style: TextStyle(
+          fontSize: 21,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    ],
+  ),
+),
+```
+
+6. `ListView()`
+<br> we can make list of data with `ListView()` widget without afraid to past of screen device.
+
+```dart
+ListView(
+  children: [
+    Container(
+      child: Text(
+        'Data 1',
+        style: TextStyle(
+          fontSize: 21,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    ),
+    Container(
+      child: Text(
+        'Data 2',
+        style: TextStyle(
+          fontSize: 21,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    ),
+  ],
+),
+```
+
+There is `ListView.builder()` to make dynamic list (number of list item is following number of data).
+
+```dart
+final textDummy = {
+  "Data 1",
+  "Data 2",
+  "Data 3",
+}
+
+ListView.builder(
+  //to count number of data that will display in list
+  itemCount: 3,
+
+  itemBuilder: (context, index) {
+    return Container(
+      child: Text(
+        //this is array String name 
+        textDummy(index),
+        style: TextStyle(
+          fontSize: 21,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    ), 
+  }
+),
+```
+
+7. `GridView()`
+<br> if you want to make certain of grid section you can use this widget, the most recognize with this widget is like 3 Grid of instagram feed section.
+
+```dart
+GridView.count(
+  //this is to determinate how much grid in a row
+  crossAxisCount: 3,
+  children: [
+    FlutterLogo(),
+    FlutterLogo(),
+    FlutterLogo(),
+    FlutterLogo(),
+    FlutterLogo(),
+    FlutterLogo(),
+  ],
+),
+```
+there is 5 type to use this widget other than `GridView.count()`, for the example, we will make same output by using each type. so we'll make 2 column grid with 4 flutter logo widget.
+
+**a. `GridView()`**
+```dart 
+GridView(
+  //to setup number of column with only GridView() you need to use gridDelegate
+  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+    crossAxisCount: 2,
+  ),
+  children: [
+    FlutterLogo(),
+    FlutterLogo(),
+    FlutterLogo(),
+    FlutterLogo(),
+  ],
+),
+```
+
+**b. `GridView.builder()`**
+```dart
+GridView.builder(
+  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+  //the item grid will follow number of item count.
+  itemBuilder: (_, index) => FlutterLogo(),
+  itemCount: 4,
+),
+```
+
+**c. `GridView.custom()`**
+```dart
+GridView.custom(
+  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+  childrenDelegate: SliverChildListDelegate(
+    [
+      FlutterLogo(),
+      FlutterLogo(),
+      FlutterLogo(),
+      FlutterLogo(),
+    ],
+  ),
+),
+```
+
+**d. `GridView.extent()`**
+```dart
+GridView.extent(
+  maxCrossAxisExtent: 400,
+  children: <Widget>[
+    FlutterLogo(),
+    FlutterLogo(),
+    FlutterLogo(),
+    FlutterLogo(),
+  ],
+),
+```
