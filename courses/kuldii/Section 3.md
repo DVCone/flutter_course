@@ -519,7 +519,7 @@ GridView.count(
 ```
 there is 5 type to use this widget other than `GridView.count()`, for the example, we will make same output by using each type. so we'll make 2 column grid with 4 flutter logo widget.
 
-**a. `GridView()`**
+**7a. `GridView()`**
 ```dart 
 GridView(
   //to setup number of column with only GridView() you need to use gridDelegate
@@ -535,7 +535,7 @@ GridView(
 ),
 ```
 
-**b. `GridView.builder()`**
+**7b. `GridView.builder()`**
 ```dart
 GridView.builder(
   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
@@ -545,7 +545,7 @@ GridView.builder(
 ),
 ```
 
-**c. `GridView.custom()`**
+**7c. `GridView.custom()`**
 ```dart
 GridView.custom(
   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
@@ -560,7 +560,7 @@ GridView.custom(
 ),
 ```
 
-**d. `GridView.extent()`**
+**7d. `GridView.extent()`**
 ```dart
 GridView.extent(
   maxCrossAxisExtent: 400,
@@ -571,4 +571,51 @@ GridView.extent(
     FlutterLogo(),
   ],
 ),
+```
+
+&emsp;
+## **4. Extract Widget / Reusable widget**
+Extract Widget is to make arrange widget looks clean by defined it in new state class.
+and this is part of OOP in writing widget.
+
+```dart
+SingleChildScrollView(
+  scrollDirection: Axis.vertical,
+  Column(
+   children: [
+     //how to use the widget
+     ColorBox(text: "Red", colors: Colors.red, ),
+     ColorBox(text: "Yellow", colors: Colors.amber, ),
+     ColorBox(text: "Blue", colors: Colors.blue, ),
+     //ect
+   ],
+  ),
+),
+
+...
+// this is extract widget and can be move to own file
+class ColorBox extends StatelessWidget {
+  const ColorBox ({
+    Key? key,
+    required this.text,
+    required this.color,
+  }) : super(key: key);
+
+  final String? text;
+  final Color? colors;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      height: 200,
+      color: colors,
+      child: Center(
+        child: Text(
+          text,
+        ),
+      ),
+    ),
+  }
+}
 ```

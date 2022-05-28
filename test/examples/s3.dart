@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         //appBar widget
         appBar: AppBar(
-          //title in appbar
+          //title in AppBar
           title: const Text(
             "First App",
           ),
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
           //background color data class type
           /* backgroundColor: Colors.cyan, */
 
-          //background color data class type + contrass
+          //background color data class type + contrast
           backgroundColor: Colors.cyan[800],
         ),
 
@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
               Container(
                 //wide size container
                 width: 200,
-                //lenght size container
+                //length size container
                 height: 200,
                 //color container
                 color: Colors.yellow[300],
