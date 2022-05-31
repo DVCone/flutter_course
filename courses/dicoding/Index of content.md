@@ -24,6 +24,7 @@
       08. Operators
       09. Exceptions
       10. (Exercise) Make temperature conversion app
+      11. Functions
       12. Variable scope
       13. Constants & finals
       14. Null safety
