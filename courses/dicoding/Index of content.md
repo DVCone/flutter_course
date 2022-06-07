@@ -87,3 +87,58 @@
       05. Quiz
 11. Closing
       01. Exam
+
+
+# Index of Flutter Beginner
+
+1. Flutter Introduction
+      01. Flutter Framework
+      02. What is Flutter ?
+      03. Flutter Installation
+      04. IDE Installation
+      05. Project Wizard
+      06. Running Device Emulator
+      07. Running Flutter Project
+      08. Running on Web Browser
+      09. Hot Reload
+      10. Summary
+      11. Knowledge Check
+2. Flutter Basic
+      01. Introduction of Flutter Basic
+      02. Hello World App
+      03. Using Packages
+      04. Summary
+      05. Knowledge Check
+3. Widget Introduction
+      01. What is Widget?
+      02. StatelessWidget & StatefulWidget
+      03. Common Widgets
+      04. Scaffold
+      05. Container Introduction
+      06. Container Decoration
+      07. Padding
+      08. Center
+      09. Row & Column
+      10. CodeLap 1 : Tourist Attraction App
+      11. Button
+      12. Input Widget
+      13. Image
+      14. Font
+      15. CodeLap 2 : Maintenance App Display
+      16. ListView
+      17. Expanded & Flexible
+      18. Navigation
+      19. Response Layout
+      20. CodeLap 3 : Show Location List
+      21. CodeLap 4 : Develop Web Version
+      22. Summary
+      23. Knowledge Check
+4. Deployment
+      01. Deployment Steps
+      02. APK Build
+      03. IPA Build
+      04. Web Deployment
+      05. Summary
+      06. Knowledge Check
+5. Closing
+      01. Exam
