@@ -7,13 +7,16 @@
             "Intelli",
             "Intellij",
             "Kasper",
+            "libglu",
             "Lund",
+            "Mkdir",
             "pubspec",
             "Reaumur",
             "Reflectly",
             "Skia",
             "Tencent",
             "webdev",
-            "Webstorm"
+            "Webstorm",
+            "xcodebuild"
       ]
 }
