@@ -102,13 +102,13 @@
       08. Running on Web Browser
       09. Hot Reload
       10. Summary
-      11. Knowledge Check
+      11. Quiz
 2. Flutter Basic
       01. Introduction of Flutter Basic
       02. Hello World App
       03. Using Packages
       04. Summary
-      05. Knowledge Check
+      05. Quiz
 3. Widget Introduction
       01. What is Widget?
       02. StatelessWidget & StatefulWidget
@@ -132,13 +132,13 @@
       20. CodeLap 3 : Show Location List
       21. CodeLap 4 : Develop Web Version
       22. Summary
-      23. Knowledge Check
+      23. Quiz
 4. Deployment
       01. Deployment Steps
       02. APK Build
       03. IPA Build
       04. Web Deployment
       05. Summary
-      06. Knowledge Check
+      06. Quiz
 5. Closing
       01. Exam
