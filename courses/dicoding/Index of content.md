@@ -104,7 +104,7 @@
       10. Summary
       11. Quiz
 2. Flutter Basic
-      01. Introduction of Flutter Basic
+      01. Introduction to Flutter Basic
       02. Hello World App
       03. Using Packages
       04. Summary
